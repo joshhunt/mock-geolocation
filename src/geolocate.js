@@ -117,7 +117,11 @@
     function getErrorData(options) {
         options = options || {};
 
-        var data = {};
+        var data = {
+            PERMISSION_DENIED: 1,
+            POSITION_UNAVAILABLE: 2,
+            TIMEOUT: 3
+        };
 
         if (options.code !== undefined) {
             data.code = options.code;
